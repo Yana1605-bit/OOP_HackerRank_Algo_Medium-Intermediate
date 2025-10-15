@@ -1,1 +1,5 @@
-
+In this problem in HackerRank nneeds to count how many numbers can be chosen so that their sum is not divisible by k. 
+The array variable name 'rem; stores how many numbers have the same remainder when divided by k. The code goes through 
+each number in s and adds 1 to its remainder group. Then it starts counting the possible elements: it 
+takes at most one from remainder 0, and for each remainder pair i and k - i, it adds the larger count between them.
+Finally, it returns count, which is the maximum size of the subset where no two numbers add up to be divisible by k.
