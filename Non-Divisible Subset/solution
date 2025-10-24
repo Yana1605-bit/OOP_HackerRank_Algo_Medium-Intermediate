@@ -26,18 +26,29 @@ class Result
 
     public static int nonDivisibleSubset(int k, List<int> s)
     {
-        int[] rem = new int[k];
-        foreach (int num in s) rem[num % k]++;
+        int[] remainderCount = new int[k];
 
-        int count = Math.Min(rem[0], 1);
+        foreach (int num in s)
+        {
+            remainderCount[num % k]++;
+        }
+
+        int result = Math.Min(remainderCount[0], 1); 
+
         for (int i = 1; i <= k / 2; i++)
         {
-            if (rem[i] > rem[k - i])
-                count += rem[i];
-            else
-                count += rem[k - i];
+            if (i != k - i)
+            {
+                result += Math.Max(remainderCount[i], remainderCount[k - i]);
+            }
         }
-        return count;
+
+        if (k % 2 == 0)
+        {
+            result++;
+        }
+
+        return result;
     }
 
 }
