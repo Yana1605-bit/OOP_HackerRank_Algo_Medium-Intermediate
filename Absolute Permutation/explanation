@@ -1,0 +1,9 @@
+In this problem in HackerRank, the AbsolutePermutation function has two parameters, n and k, both of which are integers, and it returns a list of integers. 
+Inside the this function, a new list called 'result' is created to store the final output. First is to check if k is equal 
+to 0. If it is, it adds all numbers from 1 to n into the list and returns them. Next is checking if n is divisible by 2 × k. If not, the function 
+cannot form a valid pattern, so it adds -1 to the list and returns it, 
+indicating that no valid permutation can be made. If both conditions are satisfied, the function proceeds to create a pattern 
+using a loop that runs from 1 to n. It uses a boolean variable called add to decide whether to add or subtract k from the current 
+number. If add is true, it adds i + k to the list; otherwise, it adds i - k. After every group of k numbers, the value of add is 
+flipped to alternate between addition and subtraction. This process continues until all numbers are processed. In the end, the function 
+returns the result list, which contains a “beautiful” permutation of numbers based on the given n and k values.
