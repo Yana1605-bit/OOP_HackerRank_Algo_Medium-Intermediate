@@ -1,0 +1,6 @@
+This program called Almost Sorted, checks to see if a list of numbers can be sorted by reversing or 
+switching two elements. After sorting, it looks for the differences and store them in a list 
+called diff. It will check again if the list is sorted and if there are no differences. It shows the swap 
+positions with exactly two differences. Also if there are more than two, it determines if a sorted 
+list is will reult by switching between the first and last incorrect positions. It checks all of this 
+and provides appropriate instructions based on the result.
