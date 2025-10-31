@@ -1,0 +1,10 @@
+This program in HackerRank needs to find how many numbers are “between” the two sets. A number is considered between two sets if 
+it meet the two rules. First is every element in the first list divides it equally, and  the second, it divides 
+every element in the second list equally. The first thing i do is to get the largest number in 
+the first list A and the smallest number in the second list B. The numbers will check because no valid number 
+can be larger than B or smaller than A. It then goes through every 
+integer x from A to B. For each x, it checks if all numbers in the first list A can be divide by x without 
+leaving a remainder. But if even one number fails this test, it will skips to the next x. And if x passed the first test, 
+it will kepp and move to the second condition that will checks if x can divide every number in the second list B equally. If all of these 
+divisions work perfectly with no remainder, it counts that number  and adding one to count. After checking
+all numbers between A and B, it will returns the total count of numbers.
